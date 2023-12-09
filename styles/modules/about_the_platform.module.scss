@@ -1,0 +1,242 @@
+/*
+A - About The Platform Section
+    A-1 About The Platform Image Section
+    A-2 About The Platform Decription Section
+B - About The Platform Section Style Language Start Here
+    B-1- About The Platform Style Language Arabic
+    B-2- About The Platform Style Language English
+
+C- About The Platform Style Media Query Start Here 
+    C-1- About The Platform Style Media Query 991px
+    C-2- About The Platform Style Media Query 575px
+    C-3- About The Platform Style Media Query 479px
+    C-4- About The Platform Style Media Query 320px
+
+*/
+// A- About The Platform Section
+.about_the_platform {
+  // A-1 About The Platform Image Section
+  &__imagebanar {
+    position: relative;
+    width: 585px;
+    height: 566px;
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(33px);
+    backdrop-filter: blur(33px);
+    background-color: rgba(103, 193, 140, 0.1);
+
+    .vector-bottom-right,
+    .vector-top-left {
+      width: 106px;
+      height: 104px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .vector-top-left {
+      border-top: 10px solid var(--green-200);
+      top: 0%;
+    }
+
+    .vector-bottom-right {
+      bottom: 0%;
+      border-bottom: 10px solid var(--green-200);
+    }
+
+    .image {
+      width: 552px;
+      height: 530px;
+      border-radius: 30px;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+    }
+  }
+  // A-2 About The Platform Decription Section
+  &__decription {
+    position: relative;
+    height: 566px;
+
+    div {
+      width: 95%;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h6 {
+        color: var(--dark-300);
+        font-size: var(--font-size-40);
+        font-weight: var(--font-weight-600);
+        font-family: var(--font-dinnext);
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-family: var(--font-dinnext);
+        color: var(--dark-100);
+        font-size: var(--font-size-22);
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+// B - About The Platform Section Style Language Start Here
+// B-1- About The Platform Style Language Arabic
+div[dir="rtl"] {
+  .about_the_platform {
+    direction: ltr;
+
+    &__imagebanar {
+      .vector-top-left {
+        border-left: 10px solid var(--green-200);
+        left: 0%;
+        border-top-left-radius: 30px;
+      }
+
+      .vector-bottom-right {
+        border-right: 10px solid var(--green-200);
+        right: 0%;
+        border-bottom-right-radius: 30px;
+      }
+    }
+
+    &__decription {
+      direction: rtl;
+    }
+
+    .cylinder-green-glossy {
+      right: 0%;
+    }
+  }
+}
+// B-2- About The Platform Style Language English
+div[dir="ltr"] {
+  .about_the_platform {
+    direction: rtl;
+
+    &__imagebanar {
+      .vector-top-left {
+        border-right: 10px solid var(--green-200);
+        right: 0%;
+        border-top-right-radius: 30px;
+      }
+
+      .vector-bottom-right {
+        border-left: 10px solid var(--green-200);
+        left: 0%;
+        border-bottom-left-radius: 30px;
+      }
+    }
+
+    &__decription {
+      text-align: left;
+    }
+  }
+}
+
+// C- About The Platform Style Media Query Start Here
+// C-1- About The Platform Style Media Query 991px
+@media screen and (max-width: $screen-lg) {
+  .about_the_platform {
+    &__imagebanar {
+      width: 500px;
+      height: 512px;
+
+      .image {
+        width: 470px;
+        height: 480px;
+      }
+    }
+    &__decription {
+      height: 440px;
+
+      div {
+        h6 {
+          font-size: var(--font-size-28);
+        }
+
+        p {
+          font-size: var(--font-size-20);
+        }
+      }
+    }
+  }
+}
+// C-2- About The Platform Style Media Query 575px
+
+@media screen and (max-width: $screen-sm) {
+  .about_the_platform {
+    &__imagebanar {
+      width: 425px;
+      height: 445px;
+
+      .image {
+        width: 392px;
+        height: 410px;
+      }
+    }
+    &__decription {
+      height: 440px;
+
+      div {
+        h6 {
+          font-size: var(--font-size-28);
+        }
+
+        p {
+          font-size: var(--font-size-20);
+        }
+      }
+    }
+  }
+}
+// C-3- About The Platform Style Media Query 479px
+
+@media screen and (max-width: $screen-xs) {
+  .about_the_platform {
+    margin-bottom: 0px !important;
+    &__imagebanar {
+      width: 95%;
+      height: 360px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .image {
+        width: 85%;
+        height: 315px;
+      }
+    }
+    &__decription {
+      height: 410px;
+
+      div {
+        h6 {
+          font-size: var(--font-size-22);
+        }
+
+        p {
+          font-size: var(--font-size-16);
+        }
+      }
+    }
+  }
+}

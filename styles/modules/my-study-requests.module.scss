@@ -1,0 +1,156 @@
+.my-study-requests {
+  &__navlist {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 65px auto 90px auto;
+    li.item-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      a {
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-18);
+        font-weight: 600;
+        color: var(--text-light-400);
+      }
+      .line {
+        margin-top: 10px;
+        width: 35px;
+        height: 4px;
+        border-radius: 5px;
+      }
+    }
+    .item-nav.active {
+      a {
+        color: var(--green-200);
+      }
+      .line {
+        background-color: var(--green-200);
+      }
+    }
+  }
+  &__card {
+    border-radius: 10px;
+    box-shadow: 0 18px 40px 0 rgba(112, 144, 176, 0.12);
+    padding: 24px;
+    margin-bottom: 55px;
+    &__head {
+      display: flex;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--btn-light-100);
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        align-items: center;
+        font-weight: var(--font-weight-600);
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-24);
+        color: var(--dark-200);
+        margin-bottom: 0px !important;
+      }
+
+      .link {
+        padding: 12px 45px;
+        background-color: var(--dark-200);
+        border-radius: 10px;
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-500);
+        color: var(--text-light-100);
+        text-decoration: none;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-dinnext);
+      margin: 26px 0px;
+
+      .text {
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-600);
+        color: var(--dark-200);
+        margin-bottom: 6px;
+      }
+
+      .data {
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-500);
+        color: var(--text-light-400);
+      }
+    }
+  }
+}
+div[dir="rtl"] {
+  .my-study-requests {
+    &__card {
+      &__head {
+        .title {
+          .number {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+div[dir="ltr"] {
+  .my-study-requests {
+    &__card {
+      &__head {
+        .title {
+          .number {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .my-study-requests {
+    &__navlist {
+      width: 80%;
+      margin: 65px auto 90px auto;
+      li.item-nav {
+        a {
+          font-size: var(--font-size-16);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .my-study-requests {
+    &__navlist {
+      width: 100%;
+      margin: 45px auto 60px auto;
+      li.item-nav {
+        a {
+          font-size: var(--font-size-14);
+        }
+      }
+    }
+    &__card {
+      padding: 10px;
+      margin-bottom: 35px;
+      &__head {
+        .title {
+          .text {
+            font-size: var(--font-size-16);
+          }
+        }
+
+        .link {
+          padding: 10px 15px;
+          font-size: var(--font-size-14);
+        }
+      }
+    }
+  }
+}

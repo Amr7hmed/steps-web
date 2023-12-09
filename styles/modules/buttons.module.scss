@@ -1,0 +1,114 @@
+button {
+  padding: 0px;
+  margin: 0px;
+
+  &:active {
+    border-color: transparent !important;
+  }
+}
+.btn {
+  padding: 0px;
+  margin: 0px;
+  &:disabled {
+    pointer-events: stroke;
+    cursor: not-allowed !important;
+    --btn-bg: var(--bg-100);
+    cursor: not-allowed;
+  }
+}
+.btn--danger {
+  &:hover {
+    --btn-bg: var(--red-500);
+  }
+}
+.btn--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn--pay {
+  --btn-bg: var(--red-600);
+  --btn-text: var(--text-light-300);
+}
+.btn-yellow {
+  background-color: var(--yellow-200) !important;
+  color: var(--text-light-100) !important;
+
+  &:hover {
+    background-color: var(--yellow-200) !important;
+    color: var(--text-light-100) !important;
+  }
+
+  &:active {
+    color: var(--yellow-200) !important;
+    border: 3px solid var(--yellow-200) !important;
+    background-color: var(--text-light-100) !important;
+  }
+}
+.btn-green {
+  background-color: var(--green-200) !important;
+  color: var(--text-light-100) !important;
+
+  &:hover {
+    background-color: var(--green-200) !important;
+    color: var(--text-light-100) !important;
+  }
+
+  &:active {
+    color: var(--green-200) !important;
+    border: 3px solid var(--green-200) !important;
+    background-color: var(--text-light-100) !important;
+  }
+}
+.btn-dark {
+  background-color: var(--dark-200);
+  color: var(--text-light-100);
+
+  &:hover {
+    background-color: var(--dark-200);
+    color: var(--text-light-100);
+  }
+
+  &:active {
+    border: 3px solid var(--dark-200) !important;
+    background-color: var(--dark-200);
+    color: var(--text-light-100);
+  }
+}
+.btn-light {
+  background-color: var(--btn-light-100);
+  color: var(--btn-light-200);
+
+  &:hover {
+    background-color: var(--btn-light-100);
+    color: var(--btn-light-200);
+  }
+
+  &:active {
+    border: 3px solid var(--btn-light-100) !important;
+    background-color: var(--btn-light-100);
+    color: var(--btn-light-200);
+  }
+}
+.btn-yellow-outline {
+  background-color: transparent !important;
+  color: var(--yellow-200) !important;
+  border-color: transparent !important;
+
+  > * {
+    color: var(--yellow-200) !important;
+    font-size: var(--font-size-20) !important;
+    font-weight: var(--font-weight-600) !important;
+    text-decoration: underline !important;
+  }
+
+  &:hover {
+    background-color: transparent !important;
+    color: var(--yellow-200) !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+    color: var(--yellow-200) !important;
+  }
+}

@@ -1,0 +1,587 @@
+/*
+  A- Home Style 
+    A-1 Home Hero User Section ------------
+      A-1-1 Home Hero User Info Section
+      A-1-2 Home Hero User Hero Section
+      A-1-3 Home Hero User Service Decorative Section 
+      A-1-4 Home Hero User Info Our Consultants Section
+
+    A-2 Home Hero Global Classes End Here ------------
+  
+  B- Home Style Language Start Here ------------
+    B-1- Home Style Language Arabic 
+    B-2- Home Style Language English
+
+  C- Home Style Media Query Start Here ------------
+    C-1- Home Style Media Query 991px
+    C-2- Home Style Media Query 767px
+    C-3- Home Style Media Query 575px
+    C-4- Home Style Media Query 479px
+    C-5- Home Style Media Query 320px
+*/
+
+// A- Home Style
+
+.home {
+  // A-1 Home Hero User Section ------------
+  &__user {
+    // A-1-1 Home Hero User Info Section
+    &__info {
+      width: 100%;
+      height: 155px;
+      position: relative;
+      padding: 1px;
+    }
+
+    // A-1-2 Home Hero User Hero Section
+    &__hero {
+      width: 100%;
+      height: 572px;
+      position: relative;
+
+      &__image {
+        width: 100%;
+        height: 572px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        width: 500px;
+        z-index: 2;
+        text-align: center;
+
+        p {
+          font-size: var(--font-size-40);
+          font-family: var(--font-dinnext);
+          text-align: center;
+          font-weight: var(--font-weight-600);
+          color: var(--text-light-100);
+          margin-bottom: 65px;
+
+          a {
+            font-family: var(--font-dinnext);
+            color: var(--green-200);
+            text-decoration: underline;
+          }
+        }
+
+        .btn-link {
+          padding: 19px 25px;
+          border-radius: 32px;
+          text-decoration: none;
+          font-family: var(--font-dinnext);
+          font-size: var(--font-size-16);
+          font-weight: var(--font-weight-600);
+        }
+      }
+    }
+
+    // A-1-3 Home Hero User Service Decorative Section
+    &__service {
+      &__slider {
+        height: 620px;
+
+        .slick-track {
+          margin: 0px auto;
+        }
+
+        .slider-item {
+          height: 620px !important;
+
+          .item-one {
+            position: relative;
+            width: 95% !important;
+            height: 620px !important;
+            margin: 0px auto !important;
+            border-radius: 20px;
+          }
+
+          .item-two {
+            position: relative;
+            width: 95% !important;
+            height: 300px !important;
+            margin: 0px auto !important;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+
+            &:first-of-type {
+              margin-bottom: 20px !important;
+            }
+          }
+
+          .image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .contenet {
+            position: absolute;
+            z-index: 1;
+            top: 35px;
+            left: 35px;
+            right: 35px;
+            bottom: 35px;
+            color: var(--text-light-100);
+            font-family: var(--font-dinnext);
+
+            h6 {
+              font-size: var(--font-size-24);
+              font-weight: var(--font-weight-900);
+              margin-bottom: 15px;
+            }
+
+            p {
+              font-size: var(--font-size-16);
+              font-weight: var(--font-weight-500);
+            }
+
+            a {
+              margin-top: 25px;
+              display: inline-block;
+              font-family: var(--font-dinnext);
+              font-size: var(--font-size-20);
+              font-weight: var(--font-weight-600);
+              color: var(--text-light-100);
+              padding: 10px 39px;
+              border-radius: 10px;
+              border: solid 1px var(--text-light-100);
+            }
+          }
+        }
+      }
+    }
+
+    // A-1-4 Home Hero User Info Our Consultants Section
+    &__ourconsultants {
+      .seemore {
+        text-align: center;
+        margin: 84px 0px 100px 0px;
+
+        a {
+          display: inline-block;
+          min-width: 158px;
+          max-width: auto;
+          height: 66px;
+          line-height: 60px;
+          border-radius: 10px;
+          border: solid 1px var(--green-200);
+          color: var(--green-200);
+          font-family: var(--font-dinnext);
+          font-size: var(--font-size-20);
+          font-weight: var(--font-weight-600);
+        }
+      }
+    }
+  }
+  &__title-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-dinnext);
+    margin-bottom: 50px;
+
+    .text {
+      font-size: var(--font-size-40);
+      color: var(--dark-300);
+      font-weight: var(--font-weight-600);
+      margin-bottom: 5px;
+    }
+
+    .line {
+      width: 49px;
+      height: 5px;
+      background-color: var(--green-200);
+    }
+  }
+
+  // A-2 Home Hero Global Classes End Here ------------
+  .decorativeLine-top {
+    position: absolute;
+    top: -340px;
+    left: 0%;
+    background-image: url("../../public/assets/images/home__info__decorativeLine.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 565px;
+    z-index: -2;
+  }
+
+  .roundcube-green-glossy {
+    position: absolute;
+    top: 15px;
+    background-image: url("../../public/assets/images/roundcube-green-glossy.png");
+    background-position: center;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    z-index: -1;
+  }
+
+  .cylinder-green-glossy {
+    position: absolute;
+    bottom: 0%;
+    background-image: url("../../public/assets/images/cylinder-green-glossy.png");
+    background-position: center;
+    background-size: cover;
+    width: 65px;
+    height: 113px;
+    z-index: -1;
+  }
+
+  .SuperToroid-1 {
+    position: absolute;
+    bottom: 0%;
+    background-image: url("../../public/assets/images/SuperToroid-1.png");
+    background-position: center;
+    background-size: cover;
+    width: 140px;
+    height: 124px;
+    z-index: -1;
+  }
+
+  .slick-next,
+  .slick-prev {
+    z-index: 10;
+
+    &::before {
+      color: #c1c1c1 !important;
+      font-size: var(--font-size-24);
+    }
+  }
+}
+
+// B- Home Style Language Start Here ------------
+// B-1- Home Style Language Arabic
+div[dir="rtl"] {
+  .home {
+    .roundcube-green-glossy {
+      left: 10px;
+    }
+
+    .SuperToroid-1 {
+      left: 30px;
+    }
+
+    .slick-prev {
+      left: 10px !important;
+      right: auto !important;
+    }
+
+    .slick-next {
+      right: 10px !important;
+      left: auto !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+      transform: rotate(180deg) !important;
+      -webkit-transform: rotate(180deg) !important;
+      -moz-transform: rotate(180deg) !important;
+      -ms-transform: rotate(180deg) !important;
+      -o-transform: rotate(180deg) !important;
+    }
+
+    &__user {
+      &__service {
+        &__slider {
+          .slider-item {
+            .item-one {
+              direction: rtl !important;
+            }
+
+            .item-two {
+              direction: rtl !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// B-2- Home Style Language English
+div[dir="ltr"] {
+  .home {
+    .roundcube-green-glossy {
+      right: 10px;
+    }
+
+    .SuperToroid-1 {
+      right: 30px;
+    }
+
+    .slick-prev {
+      left: 10px !important;
+    }
+
+    .slick-next {
+      right: 10px !important;
+    }
+
+    &__user {
+      &__service {
+        &__slider {
+          .slider-item {
+            .item-one {
+              direction: ltr !important;
+            }
+
+            .item-two {
+              direction: ltr !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// C- Home Style Media Query Start Here ------------
+// C-1- Home Style Media Query 991px
+@media screen and (max-width: $screen-lg) {
+  .home {
+    &__user {
+      &__hero {
+        width: 100%;
+        height: 500px;
+
+        &__image {
+          height: 500px;
+        }
+
+        &__info {
+          width: 65%;
+
+          p {
+            font-size: var(--font-size-24);
+            margin-bottom: 45px;
+          }
+
+          .btn-link {
+            padding: 19px 20px;
+            border-radius: 30px;
+            font-size: var(--font-size-14);
+          }
+        }
+      }
+    }
+
+    .roundcube-green-glossy {
+      width: 90px;
+      height: 90px;
+    }
+
+    .decorativeLine-top {
+      top: -260px;
+    }
+
+    .cylinder-green-glossy {
+      width: 60px;
+      height: 90px;
+    }
+  }
+}
+
+// C-2- Home Style Media Query 767px
+@media screen and (max-width: $screen-md) {
+  .home {
+    &__user {
+      &__hero {
+        width: 100%;
+        height: 400px;
+
+        &__image {
+          height: 400px;
+        }
+
+        &__info {
+          width: 65%;
+
+          p {
+            font-size: var(--font-size-24);
+            margin-bottom: 45px;
+          }
+
+          .btn-link {
+            padding: 19px 20px;
+            border-radius: 30px;
+            font-size: var(--font-size-14);
+          }
+        }
+      }
+    }
+  }
+}
+
+// C-4- Home Style Media Query 479px
+@media screen and (max-width: $screen-xs) {
+  .home {
+    &__user {
+      &__hero {
+        &__info {
+          width: 90%;
+
+          p {
+            font-size: var(--font-size-20);
+            margin-bottom: 40px;
+          }
+        }
+      }
+
+      &__service {
+        &__slider {
+          height: 490px;
+
+          .slider-item {
+            height: 490px !important;
+
+            .item-one {
+              height: 490px !important;
+            }
+
+            .item-two {
+              height: 235px !important;
+            }
+
+            .contenet {
+              top: 15px;
+              left: 15px;
+              right: 15px;
+              bottom: 15px;
+
+              h6 {
+                font-size: var(--font-size-20);
+                font-weight: var(--font-weight-600);
+              }
+
+              p {
+                font-size: var(--font-size-16);
+              }
+
+              a {
+                margin-top: 10px;
+                font-size: var(--font-size-14);
+                padding: 8px 15px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      &__ourconsultants {
+        .seemore {
+          text-align: center;
+          margin: 50px 0px;
+
+          a {
+            display: inline-block;
+            min-width: 158px;
+            max-width: auto;
+            height: 55px;
+            line-height: 50px;
+            font-size: var(--font-size-16);
+          }
+        }
+      }
+    }
+
+    &__title-info {
+      .text {
+        font-size: var(--font-size-28);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home {
+    &__user {
+      &__service {
+        &__slider {
+          height: 490px;
+
+          .slider-item {
+            height: 490px !important;
+
+            .item-one {
+              height: 490px !important;
+            }
+
+            .item-two {
+              height: 235px !important;
+            }
+
+            .contenet {
+              top: 15px;
+              left: 15px;
+              right: 15px;
+              bottom: 15px;
+
+              h6 {
+                font-size: var(--font-size-20);
+                font-weight: var(--font-weight-600);
+              }
+
+              p {
+                font-size: var(--font-size-16);
+              }
+
+              a {
+                margin-top: 10px;
+                font-size: var(--font-size-14);
+                padding: 8px 15px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      &__ourconsultants {
+        .seemore {
+          text-align: center;
+          margin: 50px 0px;
+
+          a {
+            display: inline-block;
+            min-width: 158px;
+            max-width: auto;
+            height: 55px;
+            line-height: 50px;
+            font-size: var(--font-size-16);
+          }
+        }
+      }
+    }
+  }
+}

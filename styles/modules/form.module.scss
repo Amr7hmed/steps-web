@@ -1,0 +1,758 @@
+form {
+  .form-group {
+    margin-bottom: 24px;
+    font-family: var(--font-dinnext);
+
+    /*
+      link for forget password in auth page (login and register) and 
+      */
+    a {
+      font-family: var(--font-dinnext);
+    }
+
+    /*
+      label for email and password in auth page (login and register) and 
+      */
+    label {
+      margin-bottom: 12px;
+      color: var(--dark-200);
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-600);
+      font-family: var(--font-dinnext);
+    }
+
+    /*
+      span for description in auth page (login and register) and 
+      */
+    span.description {
+      font-family: var(--font-dinnext);
+      display: block;
+      margin: 4px 0px 24px 0px;
+      width: 330px;
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-500);
+      color: var(--text-light-400);
+    }
+
+    /* 
+      input for email and password in auth page (login and register) and 
+      */
+    input,
+    textarea,
+    select {
+      height: 66px;
+      width: 100%;
+      border-color: transparent;
+      background-color: var(--text-light-300);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-500);
+      font-family: var(--font-dinnext);
+      line-height: normal;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+      &::placeholder {
+        font-size: var(--font-size-14);
+        font-family: var(--font-dinnext);
+        color: var(--text-light-400);
+      }
+
+      &:focus,
+      &:active,
+      &:hover,
+      &:focus-visible,
+      &:focus-within {
+        box-shadow: none !important;
+        background-color: var(--text-light-300) !important;
+        border-color: transparent !important;
+      }
+    }
+
+    /* 
+      Select for category in add  product page (add product and edit product) and 
+      add service page (add service and edit service) and  add job page (add job and edit job) and add 
+      course page (add course and edit course) and  add event page (add event and edit event)
+      */
+    select {
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-600);
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 5px 10px;
+      /* Arrow */
+      appearance: none;
+      background-image: url("/assets/icons/icon-arrowdown-selectbox.svg");
+      background-repeat: no-repeat;
+      background-size: 1rem auto;
+      color: var(--text-light-400) !important;
+
+      option {
+        color: var(--text-light-400) !important;
+
+        &:invalid {
+          color: var(--text-light-400) !important;
+        }
+      }
+
+      option[disabled] {
+        color: var(--dark-500) !important;
+        font-weight: var(--font-weight-600) !important;
+        background-color: var(--text-light-400) !important;
+      }
+
+      &:invalid {
+        color: var(--text-light-400) !important;
+      }
+
+      &:first-child {
+        color: var(--text-light-400) !important;
+      }
+    }
+
+    /* 
+      Textarea for description in add product page (add product and edit product)  
+      */
+    textarea {
+      resize: inherit;
+      height: 166px;
+    }
+
+    /* 
+      React tel input 
+      */
+    .react-tel-input {
+      height: 56px;
+      border-radius: 5px;
+      width: 100%;
+      border-color: transparent;
+      background-color: var(--text-light-300);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+
+      input {
+        border-color: transparent;
+        background-color: var(--text-light-300);
+        height: 50px;
+        width: 100%;
+        color: var(--dark-500);
+        font-size: var(--font-size-12);
+        font-weight: var(--font-weight-600);
+        font-family: var(--font-dinnext);
+
+        &::placeholder {
+          color: var(--text-light-400);
+          font-size: var(--font-size-12);
+          font-weight: var(--font-weight-600);
+        }
+      }
+
+      .rti--tag {
+        padding: 5px 8px;
+        border-radius: 8px;
+        background-color: #ddbdfe;
+
+        span {
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #161515;
+        }
+
+        button {
+          background-color: #161515;
+          width: 19px;
+          height: 19px;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          font-size: 6px;
+          font-weight: bold;
+          color: var(--white-color);
+          padding: 0px;
+          line-height: 17px;
+          text-align: center;
+        }
+      }
+    }
+
+    /* 
+       Span for toggle password in auth page (login and register) and add product page (add product and edit product)
+      and add service page (add service and edit service) and add job page (add job and edit job)
+      and add course page (add course and edit course) and add event page (add event and edit event)
+      */
+    .toggoleimg {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translate(0%, -50%);
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 21px;
+        object-fit: contain;
+        filter: invert(70%) sepia(9%) saturate(142%) hue-rotate(201deg)
+          brightness(92%) contrast(96%) !important;
+        -webkit-filter: invert(70%) sepia(9%) saturate(142%) hue-rotate(201deg)
+          brightness(92%) contrast(96%) !important;
+      }
+    }
+
+    /* 
+       Span for price in add product page (add product and edit product) 
+      */
+    .pricespan {
+      width: 24px;
+      height: 21px;
+
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-600);
+      color: var(--green-200);
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translate(0%, -50%);
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      padding: 0px;
+      margin: 0px;
+      display: block;
+    }
+
+    .file-document-span {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translate(0%, -50%);
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dark-200);
+      border-radius: 10px !important;
+      height: 66px;
+      width: 135px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    /* 
+       Button for forget password in auth page (login and register) 
+      */
+    .btn-forgetPassword {
+      font-size: var(--font-size-12);
+      font-weight: var(--font-weight-600);
+      color: var(--dark-200);
+      display: block;
+      margin-top: 8px;
+    }
+
+    /*
+       Button for upload file document type in auth page (register and edit profile) 
+      and add product page (add product and edit product) and add service page (add service and edit service) 
+      and add job page (add job and edit job) and add course page (add course and edit course)  and add event page (add event and edit event)
+      */
+    .input-group-prepend {
+      position: absolute;
+      height: 66px;
+      background-color: var(--dark-200);
+      z-index: 10;
+      border-radius: 10px !important;
+      -webkit-border-radius: 10px !important;
+      -moz-border-radius: 10px !important;
+      -ms-border-radius: 10px !important;
+      -o-border-radius: 10px !important;
+
+      button {
+        height: 100%;
+        padding: 20px 45px;
+        border-radius: 10px;
+        background-color: var(--dark-200);
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-600);
+        color: var(--text-light-100);
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--dark-200);
+          color: var(--text-light-100);
+        }
+      }
+    }
+
+    /*
+        Div for upload file document type in auth page (register and edit profile) and 
+      */
+    .file-type-document {
+      height: 66px;
+      width: 100%;
+      border: 1px solid transparent;
+      background-color: var(--text-light-300);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-500);
+      font-family: var(--font-dinnext);
+      line-height: normal;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      display: flex;
+      align-items: center;
+
+      input[type="file"] {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .placeholder-text {
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-500);
+        font-family: var(--font-dinnext);
+        line-height: normal;
+        color: var(--text-light-400);
+      }
+    }
+
+    /*
+        Div for upload file image type in auth page (register and edit profile) and 
+      */
+    .input-group-check-box {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      background-color: var(--text-light-200);
+
+      .input-item-check-box {
+        padding: 24px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 7);
+        border-right: 1px solid #dadada !important;
+        font-family: var(--font-dinnext);
+
+        input[type="checkbox"] {
+          height: 23px;
+          width: 23px;
+          border: solid 1px var(--bg-light-200) !important;
+          background-color: #fff !important;
+          display: inline-grid;
+          place-content: center;
+          border-radius: 5px !important;
+          -webkit-border-radius: 5px !important;
+          -moz-border-radius: 5px !important;
+          -ms-border-radius: 5px !important;
+          -o-border-radius: 5px !important;
+          accent-color: auto;
+          margin-bottom: 16px;
+
+          &:checked {
+            background-color: var(--green-200);
+            border: 2px solid var(--green-200);
+            accent-color: var(--green-200);
+
+            &::before {
+              transform: scale(1);
+              accent-color: var(--green-200);
+            }
+          }
+        }
+
+        span {
+          font-size: var(--font-size-16);
+          color: var(--dark-200);
+        }
+      }
+    }
+  }
+
+  .form-group.required {
+    label {
+      &:after {
+        content: "*";
+        color: var(--red-600);
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .position-relative {
+    .react-tel-input {
+      input {
+        border-color: #dc3545 !important;
+      }
+    }
+  }
+
+  .form-check {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+    input {
+      order: 1;
+      width: 24px;
+      height: 24px;
+      border-radius: 2px !important;
+      border: 1px solid var(--text-light-400);
+      appearance: none;
+      background-color: #fff;
+
+      display: inline-grid;
+      place-content: center;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        transform: scale(0);
+        transform-origin: bottom left;
+        background-color: #fff;
+        clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+      }
+
+      &:checked {
+        background-color: var(--text-light-400);
+        border: 2px solidvar(--text-light-400);
+
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+
+    label {
+      order: 2;
+      font-size: var(--font-size-14);
+      font-weight: normal;
+      color: var(--text-light-400);
+      font-family: var(--font-dinnext);
+    }
+
+    label.checklabel {
+      color: var(--dark-200);
+    }
+  }
+
+  .button-submit-auth {
+    font-size: var(--font-size-20);
+    font-family: var(--font-dinnext);
+    font-weight: var(--font-weight-600);
+    margin-top: 30px;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 66px;
+
+    &:disabled {
+      pointer-events: none;
+      background-color: var(--green-200);
+      color: var(--text-light-100);
+    }
+  }
+
+  .input-group-datapicker {
+    display: flex;
+    flex-direction: column;
+
+    .react-datepicker-wrapper {
+      width: 80%;
+
+      .react-datepicker__calendar-icon {
+        z-index: 1;
+        width: 37px;
+        height: 42px;
+        top: 25%;
+        filter: invert(18%) sepia(8%) saturate(2747%) hue-rotate(162deg)
+          brightness(94%) contrast(91%) !important;
+        -webkit-filter: invert(18%) sepia(8%) saturate(2747%) hue-rotate(162deg)
+          brightness(94%) contrast(91%) !important;
+      }
+
+      input {
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-600);
+        color: var(--bg-light-200);
+        background-color: var(--text-light-300);
+      }
+    }
+  }
+
+  .input-group-image {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      position: relative;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+
+      img.cover-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .img-upload {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        bottom: 0%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+
+        input {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
+    }
+
+    label {
+      font-size: var(--font-size-24);
+      font-weight: var(--font-weight-600);
+      color: var(--dark-200);
+      font-family: var(--font-dinnext);
+      margin-top: 20px;
+    }
+  }
+
+  .join-as-aconsultant-step-four {
+    margin: 100px 0px 150px 0px;
+    text-align: center;
+    font-family: var(--font-dinnext);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-600);
+    color: var(--dark-200);
+  }
+}
+
+.errorfiled {
+  color: var(--red-700);
+  font-size: 12px;
+  text-transform: capitalize;
+  display: block;
+  width: 100%;
+}
+
+.is-invalid {
+  border-color: var(--red-600) !important;
+}
+
+div[dir="rtl"] {
+  form {
+    .form-group {
+      .react-tel-input {
+        direction: ltr;
+
+        .rti--tag {
+          flex-direction: row-reverse;
+
+          button {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .toggoleimg,
+      .pricespan {
+        left: 10px;
+      }
+
+      .file-document-span {
+        left: 0px;
+      }
+
+      .btn-forgetPassword {
+        direction: ltr;
+      }
+
+      select {
+        background-position: left 0.7rem top 50%;
+      }
+
+      .input-group-prepend {
+        left: 0%;
+      }
+
+      .input-group-check-box {
+        .input-item-check-box {
+          &:first-of-type {
+            border-right: none !important;
+          }
+        }
+      }
+    }
+
+    .form-group.position-relative {
+      select {
+        background-position: right 0.7rem top 50%;
+      }
+    }
+
+    .form-check {
+      input {
+        margin-left: 12px;
+      }
+    }
+
+    .input-group-datapicker {
+      .react-datepicker-wrapper {
+        .react-datepicker__calendar-icon {
+          left: 24px;
+        }
+      }
+    }
+
+    .input-group-image {
+      .image {
+        .img-upload {
+          right: 10px;
+        }
+      }
+    }
+
+    .file-type-document {
+      .placeholder-text {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+div[dir="ltr"] {
+  form {
+    .form-group {
+      .react-tel-input {
+        .rti--tag {
+          flex-direction: row;
+
+          button {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .toggoleimg,
+      .pricespan {
+        right: 10px;
+      }
+
+      .file-document-span {
+        right: 0px;
+      }
+
+      .btn-forgetPassword {
+        text-align: right;
+      }
+
+      select {
+        background-position: right 0.7rem top 50%;
+      }
+
+      .input-group-prepend {
+        right: 0%;
+      }
+
+      .input-group-check-box {
+        .input-item-check-box {
+          &:last-of-type {
+            border-right: none !important;
+          }
+        }
+      }
+    }
+
+    .form-group.position-relative {
+      select {
+        background-position: right 0.7rem top 50%;
+      }
+    }
+
+    .form-check {
+      input {
+        margin-right: 12px;
+      }
+    }
+
+    .input-group-datapicker {
+      .react-datepicker-wrapper {
+        .react-datepicker__calendar-icon {
+          right: 24px;
+        }
+      }
+    }
+
+    .input-group-image {
+      .image {
+        .img-upload {
+          left: 10px;
+        }
+      }
+    }
+
+    .file-type-document {
+      .placeholder-text {
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,320 @@
+.notifications {
+  &__list {
+    margin: 70px 0px 120px 0px;
+    &__card {
+      width: 100%;
+      height: 156px;
+      flex-grow: 0;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 18px 40px 0 rgba(112, 144, 176, 0.12);
+      background-color: var(--text-light-100);
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .imgicon {
+          width: 92px;
+          height: 92px;
+        }
+
+        .text {
+          font-size: var(--font-size-20);
+          font-family: var(--font-dinnext);
+          font-weight: var(--font-weight-500);
+          color: var(--dark-200);
+        }
+      }
+
+      .btn {
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:active {
+          border: none !important;
+        }
+      }
+    }
+    &__card__empty {
+      display: block;
+      margin-bottom: 32px;
+      .react-loading-skeleton {
+        width: 100% !important;
+        height: 50px !important;
+      }
+    }
+  }
+  &__loding {
+    margin: 120px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box {
+      width: 200px;
+      height: 200px;
+      .b {
+        border-radius: 50%;
+        border-left: 4px solid;
+        border-right: 4px solid;
+        border-top: 4px solid transparent !important;
+        border-bottom: 4px solid transparent !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: Loding 2s infinite;
+        -webkit-animation: Loding 2s infinite;
+      }
+      .b1 {
+        border-color: #4a69bd;
+        width: 120px;
+        height: 120px;
+      }
+      .b2 {
+        border-color: #f6b93b;
+        width: 100px;
+        height: 100px;
+        animation-delay: 0.2s;
+      }
+      .b3 {
+        border-color: #2ecc71;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0.4s;
+      }
+      .b4 {
+        border-color: #34495e;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0.6s;
+      }
+    }
+  }
+  &__empty {
+    margin: 120px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .image {
+        width: 200px;
+        height: 200px;
+        transform: rotate(-15deg);
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          filter: invert(73%) sepia(15%) saturate(1080%) hue-rotate(92deg)
+            brightness(92%) contrast(88%) !important;
+          -webkit-filter: invert(73%) sepia(15%) saturate(1080%)
+            hue-rotate(92deg) brightness(92%) contrast(88%) !important;
+        }
+      }
+      p {
+        font-size: var(--font-size-20);
+        font-family: var(--font-dinnext);
+        font-weight: var(--font-weight-600);
+        color: var(--dark-200);
+      }
+    }
+  }
+}
+
+@keyframes Loding {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+div[dir="rtl"] {
+  .notifications {
+    &__list {
+      direction: ltr;
+
+      li {
+        flex-direction: row-reverse;
+
+        .content {
+          flex-direction: row-reverse;
+
+          .text {
+            text-align: right;
+          }
+
+          .imgicon {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+div[dir="ltr"] {
+  .notifications {
+    &__list {
+      direction: ltr;
+
+      li {
+        flex-direction: row;
+
+        .content {
+          flex-direction: row;
+
+          .text {
+            text-align: left;
+          }
+
+          .imgicon {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// C-1- About The Platform Style Media Query 991px
+@media screen and (max-width: $screen-lg) {
+  .notifications {
+    &__list {
+      margin: 70px 0px;
+
+      li {
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        .content {
+          .imgicon {
+            width: 65px;
+            height: 65px;
+          }
+
+          .text {
+            font-size: var(--font-size-16);
+          }
+        }
+
+        .btn {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  div[dir="rtl"] {
+    .notifications {
+      &__list {
+        li {
+          .content {
+            .imgicon {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div[dir="ltr"] {
+    .notifications {
+      &__list {
+        li {
+          .content {
+            .imgicon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .notifications {
+    &__list {
+      margin: 50px 0px;
+
+      li {
+        padding: 10px;
+
+        .content {
+          .imgicon {
+            width: 45px;
+            height: 45px;
+          }
+
+          .text {
+            font-size: var(--font-size-10);
+          }
+        }
+
+        .btn {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  div[dir="rtl"] {
+    .notifications {
+      &__list {
+        li {
+          .content {
+            .imgicon {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div[dir="ltr"] {
+    .notifications {
+      &__list {
+        li {
+          .content {
+            .imgicon {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

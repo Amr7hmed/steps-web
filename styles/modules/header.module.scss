@@ -1,0 +1,699 @@
+/*
+// A- Header Style //
+    A-1- Header Contact Us Section Start Here
+    A-2- Header Search Section Start Here
+      A-2-1- Header Login Section Start Here
+      A-2-2- Header Input Search Section Start Here
+      A-2-3- Header Logo Section Start Here
+      A-2-4- Header Menu Bar Section Start Here
+      
+    A-3- Header Navbar Section Start Here
+    A-4- Header Modal Section Start Here
+
+// B- Haeder Style Languages
+    B-1- Header Style Language Arabic
+    B-2- Header Style Language English
+
+// C- Header Style Responsive
+    C-1- Header Style Responsive Screen 1200px
+    C-2- Header Style Responsive Screen 992px
+    C-3- Header Style Responsive Screen 767px
+    C-4- Header Style Responsive Screen 575px
+    C-5- Header Style Responsive Screen 479px
+    C-6- Header Style Responsive Screen 320px
+    
+
+*/
+
+// A- Header Style Start Here ------------
+
+.header {
+  // A-1- Header Contact Us Section Start Here //
+  &__contactus {
+    border-bottom: solid 1px #e0e2ea;
+    .container {
+      ul.left {
+        min-height: 45px;
+        max-height: auto;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+          height: 45px;
+        }
+
+        li.chingelang {
+          .btn {
+            width: 28px;
+            height: 45px;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+            font-weight: var(--font-weight-normal);
+            color: var(--text-light-100);
+            font-family: var(--font-gluten);
+            background-color: var(--dark-200);
+            font-size: var(--font-size-16);
+          }
+        }
+
+        li.navlink {
+          border-right: solid 1px #e0e2ea;
+
+          a {
+            padding: 0px 25px;
+            font-weight: var(--font-weight-900);
+            font-size: var(--font-size-16);
+            font-family: var(--font-dinnext);
+            color: var(--green-200);
+          }
+        }
+
+        li.social_media {
+          height: 45px;
+          margin: 0px 25px;
+
+          a {
+            width: 20px;
+            height: 20px;
+            margin: 0px 6px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      ul.right {
+        min-height: 45px;
+        max-height: auto;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+          height: 45px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          .text {
+            margin: 0px 4px;
+            font-size: var(--font-size-12);
+            font-weight: var(--font-weight-600);
+            color: var(--dark-200);
+          }
+        }
+
+        .phone {
+          padding-right: 20px;
+          border-right: solid 1px #e0e2ea;
+        }
+
+        .email {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  // A-2- Header Search Section Start Here //
+  &__search {
+    padding: 28px 0px;
+
+    .container {
+      position: relative !important;
+    }
+
+    &__data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // A-2-1 Header Login Section Start Here //
+      &__login {
+        display: flex;
+        align-items: center;
+
+        .icon_notification {
+          width: 30px;
+          height: 35px;
+          position: relative;
+          display: inline-block;
+
+          .number {
+            position: absolute;
+            top: -5px;
+            width: 18px;
+            height: 18px;
+            background-color: var(--green-200);
+            border-radius: 50%;
+            font-size: 8px;
+            font-weight: var(--font-weight-600);
+            color: var(--text-light-100);
+            display: block;
+            text-align: center;
+            z-index: 1;
+            border: 1px solid var(--text-light-100);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            filter: invert(73%) sepia(15%) saturate(1080%) hue-rotate(92deg)
+              brightness(92%) contrast(88%) !important;
+            -webkit-filter: invert(73%) sepia(15%) saturate(1080%)
+              hue-rotate(92deg) brightness(92%) contrast(88%) !important;
+          }
+        }
+
+        .dropdown {
+          display: inline-block;
+          position: static;
+
+          .dropdown-toggle {
+            width: 55px;
+            height: 55px;
+            border-radius: 10px !important;
+            border-color: transparent;
+            -webkit-border-radius: 10px !important;
+            -moz-border-radius: 10px !important;
+            -ms-border-radius: 10px !important;
+            -o-border-radius: 10px !important;
+            border: 1px solid var(--text-light-100);
+            background-color: var(--text-light-100) !important;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-color: transparent;
+              border-radius: 10px !important;
+              -webkit-border-radius: 10px !important;
+              -moz-border-radius: 10px !important;
+              -ms-border-radius: 10px !important;
+              -o-border-radius: 10px !important;
+            }
+
+            &::after {
+              display: none !important;
+            }
+          }
+
+          .dropdown-menu.show {
+            display: block;
+            padding: 15px;
+            border-radius: 15px;
+            border-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 18px 40px 0 rgba(112, 144, 176, 0.12);
+            background-color: var(--text-light-100) !important;
+            min-width: 200px;
+            max-width: auto;
+            transform: translate(0px, 28px) !important;
+            -webkit-transform: translate(0px, 28px) !important;
+            -moz-transform: translate(0px, 28px) !important;
+            -ms-transform: translate(0px, 28px) !important;
+            -o-transform: translate(0px, 28px) !important;
+            border: 1px solid var(--text-light-400);
+            inset: auto !important;
+
+            li {
+              padding: 0px;
+              margin-bottom: 15px;
+
+              a,
+              .btn {
+                font-family: var(--font-dinnext) !important;
+                font-size: var(--font-size-16) !important;
+                font-weight: var(--font-weight-600) !important;
+                color: var(--dark-200) !important;
+                display: block;
+                width: 100%;
+              }
+
+              .btn {
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                letter-spacing: normal;
+                color: #161515;
+              }
+            }
+          }
+
+          .dropdown-menu.hide {
+            display: none;
+          }
+        }
+      }
+      // A-2-1 Header Login Section End Here //
+      // A-2-2 Header Input Search Section End Here //
+      &__input {
+        width: 714px;
+        height: 45px;
+        background-color: var(--text-light-300);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-family: var(--font-dinnext);
+
+        input {
+          background-color: var(--text-light-300);
+          border-color: var(--text-light-300);
+          font-size: var(--font-size-14);
+          font-weight: var(--font-weight-500);
+          color: var(--text-light-500);
+          font-family: var(--font-dinnext);
+
+          &::placeholder {
+            color: var(--text-light-500);
+            font-size: var(--font-size-12);
+            font-weight: var(--font-weight-500);
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .btn {
+          padding: 0px;
+          margin: 0px;
+          height: 100%;
+          background-color: var(--text-light-300);
+          border-color: var(--text-light-300);
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-left: none;
+
+          img {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            margin-left: 5px;
+          }
+          &:active {
+            background-color: var(--text-light-300);
+            border-color: var(--text-light-300);
+          }
+        }
+      }
+      // A-2-2 Header Input Search Section End Here //
+      // A-2-3 Header Logo Section End Here //
+      &__logo {
+        width: 108px;
+        height: 55px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      // A-2-3 Header Logo Section End Here //
+      // A-2-4 Header Menu Bar Section End Here //
+      &__menu-bar {
+        display: none !important;
+        .btn {
+          width: 45px;
+          height: 45px;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          &::after {
+            display: none !important;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .btn-open-search {
+        display: none !important;
+        padding: 0px;
+        margin: 0px;
+        background-color: var(--text-light-300);
+        border-color: var(--text-light-300);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left: none;
+        width: 45px;
+        height: 45px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+  // A-3- Header Navbar Section Start Here //
+  &__navbar {
+    .nav-item {
+      a {
+        font-family: var(--font-dinnext);
+        font-size: var(--font-size-20);
+        color: var(--dark-200);
+        font-weight: var(--font-weight-500);
+        padding-bottom: 0px;
+      }
+    }
+
+    .nav-item.active {
+      .activesapn {
+        width: 30px;
+        height: 5px;
+        display: inline-block;
+        background-color: var(--green-200);
+        border-radius: 10px;
+      }
+    }
+  }
+  // A-4- Header Modal Section Start Here //
+  &__modal {
+    .modal-dialog {
+      margin: 0px !important;
+      width: 100%;
+      max-width: 100% !important;
+      .modal-content {
+        border: none !important;
+        border-radius: 0px !important;
+        -webkit-border-radius: 0px !important;
+        -moz-border-radius: 0px !important;
+        -ms-border-radius: 0px !important;
+        -o-border-radius: 0px !important;
+        height: 100vh;
+        width: 50%;
+
+        .modal-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          ul {
+            .nav-item {
+              margin-bottom: 20px;
+              a {
+                font-family: var(--font-dinnext);
+                font-size: var(--font-size-20);
+                color: var(--dark-200);
+                font-weight: var(--font-weight-500);
+                padding-bottom: 0px;
+              }
+            }
+
+            .nav-item.active {
+              .activesapn {
+                width: 30px;
+                height: 5px;
+                display: inline-block;
+                background-color: var(--green-200);
+                border-radius: 10px;
+              }
+            }
+          }
+          .modal-body-end {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .join-as-aconsultant {
+              margin: 45px 0px;
+              font-weight: var(--font-weight-900);
+              font-size: var(--font-size-16);
+              font-family: var(--font-dinnext);
+              color: var(--green-200);
+            }
+            div.social_media {
+              height: 45px;
+              margin: 0px 25px;
+
+              a {
+                width: 20px;
+                height: 20px;
+                margin: 0px 6px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn-createaccount {
+    width: 138px;
+    height: 47px;
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-600);
+    line-height: 40px;
+  }
+}
+
+// A- Header Style End Here //
+
+// B- Header Style Language Start Here ---------
+// B-1- Header Style Language Arabic //
+div[dir="rtl"] {
+  .header {
+    &__contactus,
+    &__search {
+      direction: ltr;
+    }
+    &__search {
+      .input-group {
+        input {
+          text-align: right;
+        }
+      }
+      &__data {
+        &__login {
+          .icon_notification {
+            margin-left: 45px;
+
+            .number {
+              left: 15px;
+            }
+          }
+
+          .dropdown {
+            .dropdown-menu.show {
+              li {
+                a,
+                .btn {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+        &__menu-bar {
+          margin-right: 10px;
+        }
+      }
+    }
+    &__navbar {
+      .nav-item {
+        margin-left: 60px;
+
+        a {
+          padding-right: 0px;
+        }
+      }
+    }
+    &__modal {
+      direction: ltr;
+      .modal-dialog {
+        .modal-content {
+          direction: rtl;
+        }
+      }
+    }
+  }
+}
+
+// B-2- Header Style Language English //
+div[dir="ltr"] {
+  .header {
+    &__navbar {
+      .nav-item {
+        margin-right: 60px;
+
+        a {
+          padding-left: 0px;
+        }
+      }
+    }
+    &__search {
+      &__data {
+        &__login {
+          .icon_notification {
+            margin-left: 45px;
+
+            .number {
+              right: 15px;
+            }
+          }
+
+          .dropdown {
+            .dropdown-menu.show {
+              li {
+                a,
+                .btn {
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+        &__menu-bar {
+          margin-left: 10px;
+        }
+      }
+    }
+    &__modal {
+      .content {
+        right: 0px !important;
+      }
+    }
+  }
+}
+
+// B- Header Style Language End Here //
+
+// C- Header Style Responsive Start Here ------------
+// C-1- Header Style Responsive Screen 1200px //
+@media (max-width: $screen-2xl) {
+  .header {
+    &__search {
+      &__data {
+        &__input {
+          width: 600px !important;
+        }
+      }
+    }
+  }
+}
+
+// C-2- Header Style Responsive Screen 992 //
+@media (max-width: $screen-lg) {
+  .header {
+    &__contactus {
+      border-bottom: solid 1px #e0e2ea;
+
+      .container {
+        ul.left {
+          li.navlink,
+          li.social_media {
+            display: none !important;
+          }
+        }
+
+        ul.right {
+          min-height: 45px;
+          max-height: auto;
+          margin: 0px;
+          padding: 0px;
+
+          li {
+            height: 45px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .text {
+              margin: 0px 4px;
+              font-size: var(--font-size-12);
+              font-weight: var(--font-weight-600);
+              color: var(--dark-200);
+            }
+          }
+
+          .phone {
+            padding-right: 20px;
+            border-right: solid 1px #e0e2ea;
+          }
+
+          .email {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+
+    &__search {
+      &__data {
+        justify-content: flex-start !important;
+        &__login {
+          display: none !important;
+        }
+        &__logo {
+          width: 85px;
+          height: 40px;
+        }
+        &__input {
+          transition: width 4s;
+          overflow: hidden;
+          -webkit-transition: width 4s;
+          -moz-transition: width 4s;
+          -ms-transition: width 4s;
+          -o-transition: width 4s;
+          .input-group-append {
+            display: none !important;
+          }
+          input {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+        .hide-input-search {
+          width: 0px !important;
+          input {
+            padding: 0px;
+            width: 0px !important;
+            display: none !important;
+            visibility: hidden !important;
+          }
+        }
+        .show-input-search {
+          width: calc(100% - 215px) !important;
+        }
+
+        .btn-open-search {
+          display: block !important;
+        }
+        &__menu-bar {
+          display: block !important;
+        }
+      }
+    }
+    &__navbar {
+      display: none !important;
+    }
+  }
+  div[dir="rtl"] {
+    .header {
+      &__search {
+        &__data {
+          &__logo {
+            margin-left: auto !important;
+          }
+        }
+      }
+    }
+  }
+}

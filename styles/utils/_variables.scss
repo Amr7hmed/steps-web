@@ -1,0 +1,94 @@
+// Font Family
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&family=Gluten:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "DINNextLTArabic";
+  src: url("../font/DINNextLTArabic-Regular-3.ttf");
+}
+
+//BEGIN Global Variables
+:root {
+  --text-light-300-transparent-30: hsla(0, 0%, 97%, 30%);
+
+  --text-light-100: #ffffff;
+  --text-light-200: #f9fafc;
+  --text-light-300: #f9fafb;
+  --text-light-400: #b5b7bf;
+  --text-light-500: #767676;
+
+  --bg-light-100: #f4f6fd;
+  --bg-light-200: #bfbfbf;
+
+  --btn-light-100: #ebebeb;
+  --btn-light-200: #838385;
+
+  --green-200: #67c18c;
+
+  --yellow-200: #ffb547;
+
+  --red-300: #fca5a5;
+  --red-400: #e31a1a;
+  --red-500: #ef4444;
+  --red-600: #dc3545;
+  --red-700: #ff1010;
+
+  --border-100: hsl(210, 3%, 40%);
+  --border-200: #c0c0c0;
+  --border-200-transparent-50: hsla(210, 3%, 30%, 50%);
+  --border-300: hsl(210, 3%, 20%);
+
+  --dark-100: #d5d5d5;
+  --dark-200: #203848;
+  --dark-300: #263238;
+  --dark-400: #111;
+  --dark-500: #000000;
+
+  --navbar-height: 6rem;
+  --navbar-mobile-bg: #1d1e1f;
+
+  --bg-skeleton: #36383a;
+  --accent-skeleton: hsla(206, 4%, 42%, 0.5);
+
+  --font-dinnext: "DINNextLTArabic";
+  --font-gluten: "Gluten", cursive;
+
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-36: 36px;
+  --font-size-40: 40px;
+
+  --font-weight-normal: normal;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-900: 900;
+}
+
+// Screen Break Points
+// Taken from tailwindCSS https://tailwindcss.com/docs/screens
+$screen-xs: 475px;
+$screen-sm: 575px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xlg: 1024px;
+$screen-2xl: 1200px;
+$screen-3xl: 1536px;
+
+//END Global Variables
+
+.mr-t-section-120 {
+  margin-top: 125px;
+}
+.mr-b-section-120 {
+  margin-bottom: 125px;
+}
+
+.mr-b-section-420 {
+  margin-bottom: 420px;
+}

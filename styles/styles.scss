@@ -1,0 +1,295 @@
+@import "utils/variables";
+
+//BEGIN Root font size
+@media (max-width: $screen_md) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $screen_sm) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+//END Root font size
+
+//BEGIN Basic Setup
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-dinnext);
+}
+
+button,
+a,
+textarea,
+input {
+  font-family: "Barlow", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+//END Basic Setup
+
+//BEGIN Utility Classes
+
+.error {
+  min-height: 1rem;
+  margin-top: -3px;
+  margin-bottom: -0.5rem;
+  color: var(--red-300);
+  font-size: 0.8em;
+}
+
+input[type="password"].default-input:disabled {
+  cursor: not-allowed;
+}
+
+/* Remove Arrow On Input Number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type="number"] {
+  appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  &:focus,
+  &:hover {
+    appearance: textfield !important;
+    -moz-appearance: textfield !important;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+
+  > input {
+    width: 100%;
+    padding-inline-end: 2rem;
+  }
+
+  .password-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    inset-inline-end: 0.2rem;
+    width: 2rem;
+
+    background-color: unset;
+    border: unset;
+
+    cursor: pointer;
+
+    > svg {
+      color: var(--text-light-400);
+      font-size: 1.2rem;
+
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      > svg {
+        color: var(--text-light-500);
+      }
+    }
+  }
+}
+
+.slick-dots {
+  li {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0px 10px !important;
+    button {
+      background-color: #e0e5f2 !important;
+      color: #e0e5f2 !important;
+      width: 10px !important;
+      height: 10px !important;
+      border-radius: 50% !important;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      -ms-border-radius: 50% !important;
+      -o-border-radius: 50% !important;
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+
+  li.slick-active {
+    width: 24px !important;
+    height: 10px !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    button {
+      color: var(--dark-200) !important;
+      background-color: var(--dark-200) !important;
+      width: 24px !important;
+      height: 10px !important;
+      border-radius: 5px !important;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+    }
+  }
+}
+//END Utility Classes
+
+//END media queries
+
+//END Animation
+//BEGIN Tweaks
+// Changing Chromium autofill default colors
+ul {
+  list-style: none;
+}
+
+// Changing scrollbar
+* {
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-400);
+    border-radius: 5px;
+  }
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  border-radius: 2px !important;
+  display: inline-grid;
+  place-content: center;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  -ms-border-radius: 2px !important;
+  -o-border-radius: 2px !important;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transform-origin: bottom left;
+    background-color: #fff;
+    clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+
+  &:checked {
+    background-color: var(--green-200);
+    border: 2px solid var(--green-200);
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+//END Tweaks
+
+//BEGIN Fixing Imports
+
+.react-tel-input .flag-dropdown {
+  border: unset !important;
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: var(--bg-200) !important;
+  border-start-start-radius: 10px;
+  border-end-start-radius: 10px;
+}
+
+.react-tel-input .country-list {
+  border-radius: 10px !important;
+  background-color: var(--bg-400) !important;
+}
+
+.react-tel-input .country-list .country.highlight,
+.react-tel-input .country-list .country:hover {
+  background-color: var(--bg-100) !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: transparent !important;
+  border-radius: unset;
+  border-start-start-radius: 10px;
+  border-end-start-radius: 10px;
+}
+
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+
+//END Fixing Imports
+//BEGIN Imports
+@import "./modules/globals.module.scss";
+@import "./modules/header.module.scss";
+@import "./modules/footer.module.scss";
+@import "./modules/auth.module.scss";
+@import "./modules/home.module.scss";
+@import "./modules/card.module.scss";
+@import "./modules/about_the_platform.module.scss";
+@import "./modules/hero-other-pages.module.scss";
+@import "./modules/notifications.module.scss";
+@import "./modules/legal.module.scss";
+@import "./modules/contact-us.module.scss";
+@import "./modules/our-consultant.module.scss";
+@import "./modules/pagination.module.scss";
+@import "./modules/consultant.module.scss";
+//@import "./modules/feasibility-study.module.scss";
+@import "./modules/my-account.module.scss";
+@import "./modules/buttons.module.scss";
+@import "./modules/form.module.scss";
+@import "./modules/study.module.scss";
+@import "./modules/my-requests.module.scss";
+@import "./modules/my-studies.module.scss";
+@import "./modules/request.module.scss";
+@import "./modules/my-study-requests.module.scss";
+@import "./modules/404.module.scss";
+@import "./modules/empty-page.module.scss";
+@import "./modules/request.module.scss";
+//END Imports
